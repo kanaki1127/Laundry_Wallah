@@ -1,0 +1,619 @@
+/* RESET AND BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* NAVBAR STYLES - Mobile First */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 3px solid #3aa7ff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+nav a {
+    margin: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: #3aa7ff;
+}
+
+.user {
+    background-color: #e6f2ff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Tablet and Desktop Navbar */
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 30px;
+    }
+    
+    .logo img {
+        width: 70px;
+        margin-bottom: 0;
+    }
+    
+    nav {
+        margin: 0;
+    }
+    
+    nav a {
+        margin: 0 15px;
+    }
+}
+
+/* HERO SECTION - Mobile First */
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+.hero-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.hero-text span {
+    color: #3aa7ff;
+    display: block;
+    font-size: 2rem;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #3aa7ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #1e8be0;
+}
+
+.hero-img {
+    margin-top: 30px;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+}
+
+/* Tablet Hero */
+@media (min-width: 768px) {
+    .hero {
+        display: flex;
+        text-align: left;
+        padding: 60px 40px;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .hero-text {
+        flex: 1;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text span {
+        font-size: 2.5rem;
+    }
+    
+    .hero-img {
+        flex: 1;
+        margin-top: 0;
+    }
+}
+
+/* Desktop Hero */
+@media (min-width: 1024px) {
+    .hero {
+        padding: 80px 60px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-text span {
+        font-size: 3rem;
+    }
+}
+
+/* ACHIEVEMENTS SECTION - Mobile First */
+.achievements {
+    background-color: #3aa7ff;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.achievements div {
+    margin-bottom: 20px;
+}
+
+.achievements h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.achievements p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Tablet Achievements */
+@media (min-width: 768px) {
+    .achievements {
+        display: flex;
+        justify-content: space-around;
+        padding: 40px;
+    }
+    
+    .achievements div {
+        margin-bottom: 0;
+    }
+}
+
+/* SERVICES SECTION - Mobile First */
+.services-section {
+    padding: 30px 20px;
+    background-color: #f5f5f5;
+}
+
+.services-list, .cart-booking {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.services-list h2, .cart h3, .booking h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3aa7ff;
+    padding-bottom: 10px;
+}
+
+.services-list p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.service-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #3aa7ff;
+}
+
+.service-card span {
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.service-card div {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.add-btn, .remove-btn {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-btn {
+    background-color: #3aa7ff;
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: #1e8be0;
+}
+
+.remove-btn {
+    background-color: #ff4444;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #cc0000;
+}
+
+.note {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Tablet Service Cards */
+@media (min-width: 600px) {
+    .service-card {
+        flex-wrap: nowrap;
+    }
+    
+    .service-card span {
+        width: auto;
+        margin-bottom: 0;
+    }
+    
+    .service-card div {
+        width: auto;
+    }
+    
+    .add-btn, .remove-btn {
+        flex: none;
+        width: 80px;
+    }
+}
+
+/* Desktop Services Section */
+@media (min-width: 992px) {
+    .services-section {
+        display: flex;
+        gap: 30px;
+        padding: 50px;
+    }
+    
+    .services-list {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    
+    .cart-booking {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+/* CART STYLES */
+.cart {
+    margin-bottom: 20px;
+}
+
+#cart-items {
+    min-height: 100px;
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 2px solid #3aa7ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* BOOKING FORM STYLES */
+.booking input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.booking input:focus {
+    outline: none;
+    border-color: #3aa7ff;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #3aa7ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background-color: #1e8be0;
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* FEATURES SECTION - Mobile First */
+.features {
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.features h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #3aa7ff;
+    padding: 5px;
+}
+
+.feature h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.feature p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Tablet Features */
+@media (min-width: 600px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Features */
+@media (min-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    
+    .features {
+        padding: 60px 50px;
+    }
+}
+
+/* NEWSLETTER SECTION - Mobile First */
+.newsletter {
+    background-color: #3aa7ff;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.newsletter h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #1a2632;
+}
+
+/* Tablet Newsletter */
+@media (min-width: 600px) {
+    .newsletter div {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop Newsletter */
+@media (min-width: 768px) {
+    .newsletter {
+        padding: 60px;
+    }
+    
+    .newsletter h2 {
+        font-size: 2.2rem;
+    }
+    
+    .newsletter input {
+        width: 300px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    
+    .newsletter button {
+        width: auto;
+        padding: 12px 30px;
+    }
+}
+
+/* FOOTER - Mobile First */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+}
+
+footer div {
+    margin-bottom: 30px;
+}
+
+footer img {
+    margin-bottom: 15px;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+    color: #3aa7ff;
+    font-size: 1.2rem;
+}
+
+footer p, footer a {
+    color: #b0c4de;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+footer a:hover {
+    color: #3aa7ff;
+}
+
+/* Tablet Footer */
+@media (min-width: 600px) {
+    footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    footer div {
+        margin-bottom: 0;
+    }
+}
+
+/* Desktop Footer */
+@media (min-width: 992px) {
+    footer {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 60px 50px;
+    }
+}
+
+/* UTILITY CLASSES */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
